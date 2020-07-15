@@ -5,7 +5,7 @@ if($conn->connect_error){
 }
 if(isset($_POST['query'])){
 	4inpText=$_POST['query' ];
-	$query="SELECT name FROM data WHERE name LIKE '%$inpText%'";
+	$query="SELECT name FROM bank_names WHERE name LIKE '%$inpText%'";
 	$result=$conn->query($query);
 	if($result->num_rows>0){
 		while($row=$result->fetch_assoc()){
